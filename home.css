@@ -1,0 +1,362 @@
+/* =========================================================
+   home.css  -  HOME PAGE ONLY
+   Hero, stats, property cards, steps, info boxes, CTA.
+   ========================================================= */
+
+
+/* ---------- 1. Common section wrapper ---------- */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+.section-alt {
+  max-width: 100%;
+  background-color: var(--sand);
+}
+
+.section-alt .section-head,
+.section-alt .steps {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.section-head h2 {
+  font-size: 30px;
+}
+
+.link-more {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 1px solid var(--accent);
+}
+
+
+/* ---------- 2. Hero ---------- */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 70px 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1.1;
+}
+
+.hero-text h1 {
+  font-size: 44px;
+  margin-bottom: 18px;
+}
+
+.hero-text > p {
+  font-size: 17px;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 520px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 220px;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--ink);
+}
+
+.search-box input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.hero-note {
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background-color: var(--sand);   /* shows if image is missing */
+}
+
+
+/* ---------- 3. Stats strip ---------- */
+.stats {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stat {
+  padding: 28px 10px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 30px;
+  color: var(--accent);
+}
+
+.stat p {
+  font-size: 14px;
+}
+
+
+/* ---------- 4. Property cards ---------- */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.property-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: var(--sand);
+}
+
+/* status label on the photo */
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.tag-available   { background-color: #1F7A6B; }
+.tag-occupied    { background-color: #4A6076; }
+.tag-maintenance { background-color: #C2731C; }
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.location {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.features li {
+  background-color: var(--sand);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.price small {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+
+/* ---------- 5. How it works (numbered steps) ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  padding: 0 20px 70px;
+}
+
+.steps li h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.steps li p {
+  font-size: 15px;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+
+/* ---------- 6. Owner / tenant boxes ---------- */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.info-box {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+
+.info-box h3 {
+  font-size: 21px;
+  margin-bottom: 16px;
+}
+
+.info-box ul {
+  margin-bottom: 24px;
+}
+
+.info-box ul li {
+  font-size: 15px;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* small tick made with CSS instead of an image */
+.info-box ul li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+
+/* ---------- 7. Call to action ---------- */
+.cta {
+  background-color: var(--accent);
+  color: #DCEFEA;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  color: var(--white);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 26px;
+}
+
+
+/* ---------- 8. Responsive layout ---------- */
+@media (max-width: 1000px) {
+  .property-grid,
+  .steps,
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 45px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-image img {
+    height: 260px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .property-grid,
+  .steps,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 45px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+}

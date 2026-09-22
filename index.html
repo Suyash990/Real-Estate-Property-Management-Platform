@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NestKey | Real Estate Property Management Platform</title>
+
+  <!-- Shared styles: navbar, footer, buttons, colours (used by all pages) -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+  <!-- ============ NAVIGATION BAR (shared across all pages) ============ -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Nest<span>Key</span></a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="listings.html">Properties</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="rent-maintenance.html">Rent &amp; Repairs</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-primary btn-small">Sign in</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Every property, tenant and rent payment in one place.</h1>
+      <p>
+        NestKey helps owners list properties, track rent and handle maintenance
+        requests, while tenants get a simple place to pay rent and report issues.
+      </p>
+
+      <!-- Search box (layout only in this phase) -->
+      <div class="search-box">
+        <input type="text" placeholder="Search by city, locality or PIN code">
+        <a href="listings.html" class="btn btn-primary">Search</a>
+      </div>
+
+      <p class="hero-note">Popular: Mathura &middot; Vrindavan &middot; Agra &middot; Noida</p>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/hero-building.jpg" alt="Modern apartment building">
+    </div>
+  </section>
+
+  <!-- ============ QUICK STATS ============ -->
+  <section class="stats">
+    <div class="stat">
+      <h3>1,200+</h3>
+      <p>Properties listed</p>
+    </div>
+    <div class="stat">
+      <h3>3,500+</h3>
+      <p>Tenants managed</p>
+    </div>
+    <div class="stat">
+      <h3>98%</h3>
+      <p>Rent collected on time</p>
+    </div>
+    <div class="stat">
+      <h3>24 hrs</h3>
+      <p>Average repair response</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PROPERTIES ============ -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Featured properties</h2>
+      <a href="listings.html" class="link-more">View all properties</a>
+    </div>
+
+    <div class="property-grid">
+
+      <!-- Property card 1 -->
+      <article class="property-card">
+        <div class="card-image">
+          <img src="images/property-1.jpg" alt="2 BHK apartment in Mathura">
+          <span class="tag tag-available">Available</span>
+        </div>
+        <div class="card-body">
+          <h3>2 BHK Apartment</h3>
+          <p class="location">Krishna Nagar, Mathura</p>
+          <ul class="features">
+            <li>2 Beds</li>
+            <li>2 Baths</li>
+            <li>950 sq ft</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">&#8377;14,000 <small>/ month</small></span>
+            <a href="property-details.html" class="btn btn-outline btn-small">Details</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Property card 2 -->
+      <article class="property-card">
+        <div class="card-image">
+          <img src="images/property-2.jpg" alt="3 BHK independent house">
+          <span class="tag tag-occupied">Occupied</span>
+        </div>
+        <div class="card-body">
+          <h3>3 BHK Independent House</h3>
+          <p class="location">Govind Nagar, Mathura</p>
+          <ul class="features">
+            <li>3 Beds</li>
+            <li>3 Baths</li>
+            <li>1,600 sq ft</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">&#8377;22,500 <small>/ month</small></span>
+            <a href="property-details.html" class="btn btn-outline btn-small">Details</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Property card 3 -->
+      <article class="property-card">
+        <div class="card-image">
+          <img src="images/property-3.jpg" alt="Commercial shop space">
+          <span class="tag tag-maintenance">Under repair</span>
+        </div>
+        <div class="card-body">
+          <h3>Commercial Shop Space</h3>
+          <p class="location">Bhuteshwar Road, Mathura</p>
+          <ul class="features">
+            <li>Ground floor</li>
+            <li>1 Bath</li>
+            <li>600 sq ft</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">&#8377;30,000 <small>/ month</small></span>
+            <a href="property-details.html" class="btn btn-outline btn-small">Details</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Property card 4 -->
+      <article class="property-card">
+        <div class="card-image">
+          <img src="images/property-4.jpg" alt="1 BHK studio flat">
+          <span class="tag tag-available">Available</span>
+        </div>
+        <div class="card-body">
+          <h3>1 BHK Studio Flat</h3>
+          <p class="location">Masani Road, Mathura</p>
+          <ul class="features">
+            <li>1 Bed</li>
+            <li>1 Bath</li>
+            <li>480 sq ft</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">&#8377;8,500 <small>/ month</small></span>
+            <a href="property-details.html" class="btn btn-outline btn-small">Details</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS (a real sequence, so numbers are used) ============ -->
+  <section class="section section-alt">
+    <div class="section-head">
+      <h2>How it works</h2>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <span class="step-number">1</span>
+        <h3>List your property</h3>
+        <p>Add photos, rent amount, and available dates so tenants can find it.</p>
+      </li>
+      <li>
+        <span class="step-number">2</span>
+        <h3>Approve a tenant</h3>
+        <p>Review requests, record lease dates and store the agreement in one place.</p>
+      </li>
+      <li>
+        <span class="step-number">3</span>
+        <h3>Track rent</h3>
+        <p>See what is paid, pending or overdue without keeping a separate register.</p>
+      </li>
+      <li>
+        <span class="step-number">4</span>
+        <h3>Handle repairs</h3>
+        <p>Tenants raise a request, you mark it as in progress or completed.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ FOR OWNERS / FOR TENANTS ============ -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Built for both sides of the lease</h2>
+    </div>
+
+    <div class="two-column">
+      <div class="info-box">
+        <h3>If you own property</h3>
+        <ul>
+          <li>Keep every property, lease and tenant record together</li>
+          <li>See rent status at a glance instead of chasing payments</li>
+          <li>Get maintenance requests in writing, not over the phone</li>
+          <li>Review occupancy and income from one dashboard</li>
+        </ul>
+        <a href="dashboard.html" class="btn btn-primary">Open owner dashboard</a>
+      </div>
+
+      <div class="info-box">
+        <h3>If you rent</h3>
+        <ul>
+          <li>Check your rent due date and payment history anytime</li>
+          <li>Report a leak or breakdown in under a minute</li>
+          <li>Find your lease details without searching through papers</li>
+          <li>Message your owner about the property in one thread</li>
+        </ul>
+        <a href="rent-maintenance.html" class="btn btn-outline">Pay rent or report an issue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALL TO ACTION ============ -->
+  <section class="cta">
+    <h2>Start managing your properties today</h2>
+    <p>Create an account and add your first property in a few minutes.</p>
+    <a href="register.html" class="btn btn-light">Create free account</a>
+  </section>
+
+  <!-- ============ FOOTER (shared across all pages) ============ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <a href="index.html" class="logo logo-light">Nest<span>Key</span></a>
+        <p>A property management platform built as a front-end project using HTML5 and CSS3.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="listings.html">Browse properties</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="rent-maintenance.html">Rent &amp; repairs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Help centre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>GLA University, Mathura</li>
+          <li>support@nestkey.in</li>
+          <li>+91 98765 43210</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 NestKey. B.Tech CSE Project, GLA University, Mathura.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

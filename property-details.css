@@ -1,0 +1,332 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+    color: #333;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #1f4e79;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #1f4e79;
+}
+
+
+/* Main Property */
+
+.property-section {
+    width: 85%;
+    margin: 50px auto;
+    background-color: white;
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.property-image {
+    width: 50%;
+}
+
+.property-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.property-info {
+    width: 50%;
+    padding: 10px;
+}
+
+.location {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.property-info h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.property-info h2 {
+    color: #1f4e79;
+    margin-bottom: 20px;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* Property Details */
+
+.details {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.details div {
+    text-align: center;
+}
+
+.details h3 {
+    color: #1f4e79;
+    font-size: 22px;
+}
+
+.details p {
+    color: #666;
+    margin-top: 5px;
+}
+
+
+/* Button */
+
+.contact-btn,
+form button {
+    background-color: #1f4e79;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.contact-btn:hover,
+form button:hover {
+    background-color: #163a5c;
+}
+
+
+/* Gallery */
+
+.gallery-section {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+/* Amenities */
+
+.amenities-section {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.amenities-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.amenities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.amenity {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.amenity span {
+    font-size: 30px;
+}
+
+.amenity p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* Property Information */
+
+.property-information {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.property-information h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+td:first-child {
+    font-weight: bold;
+    width: 50%;
+}
+
+
+/* Contact Form */
+
+.contact-section {
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 7px 0;
+}
+
+
+/* Mobile View */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .property-section {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .property-image,
+    .property-info {
+        width: 100%;
+    }
+
+    .property-image img {
+        height: 280px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities {
+        grid-template-columns: 1fr;
+    }
+
+    .property-information,
+    .contact-section {
+        width: 90%;
+    }
+}
+```

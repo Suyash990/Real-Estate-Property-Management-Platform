@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent & Maintenance</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">RentEase</div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="rent-maintenance.html">Rent & Maintenance</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="welcome">
+            <h1>Rent & Maintenance</h1>
+            <p>Manage your rent payments and maintenance requests.</p>
+        </section>
+
+
+        <!-- Rent Status -->
+
+        <section class="rent-section">
+
+            <h2>Rent Status</h2>
+
+            <div class="rent-card">
+
+                <div>
+                    <h3>Monthly Rent</h3>
+                    <p class="rent-amount">₹15,000</p>
+                </div>
+
+                <div>
+                    <h3>Due Date</h3>
+                    <p>01 October 2026</p>
+                </div>
+
+                <div>
+                    <h3>Status</h3>
+                    <span class="paid">Paid</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Maintenance Request -->
+
+        <section class="maintenance-section">
+
+            <h2>Submit Maintenance Request</h2>
+
+            <form>
+
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+
+                <label for="property">Property / Unit</label>
+                <input type="text" id="property" placeholder="Enter property or unit number">
+
+
+                <label for="issue">Issue Type</label>
+
+                <select id="issue">
+
+                    <option value="">Select an issue</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="electricity">Electricity</option>
+                    <option value="ac">AC / Cooling</option>
+                    <option value="water">Water Supply</option>
+                    <option value="other">Other</option>
+
+                </select>
+
+
+                <label for="description">Description</label>
+
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Describe your maintenance problem">
+                </textarea>
+
+
+                <label for="date">Preferred Date</label>
+
+                <input type="date" id="date">
+
+
+                <button type="submit">
+                    Submit Request
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Previous Requests -->
+
+        <section class="requests-section">
+
+            <h2>Previous Maintenance Requests</h2>
+
+            <div class="request-card">
+
+                <div>
+                    <h3>Water Leakage</h3>
+                    <p>Kitchen sink pipe is leaking.</p>
+                </div>
+
+                <span class="pending">
+                    In Progress
+                </span>
+
+            </div>
+
+
+            <div class="request-card">
+
+                <div>
+                    <h3>Fan Repair</h3>
+                    <p>Bedroom fan is not working properly.</p>
+                </div>
+
+                <span class="completed">
+                    Completed
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 RentEase. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

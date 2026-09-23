@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background-color: #1f2937;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 50px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* Welcome */
+
+.welcome {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    margin-bottom: 10px;
+}
+
+
+/* Headings */
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Lease */
+
+.lease-section {
+    margin-bottom: 30px;
+}
+
+.lease-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.lease-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.lease-card h3 {
+    margin-bottom: 12px;
+}
+
+
+/* Status */
+
+.status-section {
+    margin-bottom: 30px;
+}
+
+.status-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.status-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.status-card h3 {
+    margin-bottom: 15px;
+}
+
+.amount {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Status Labels */
+
+.paid {
+    display: inline-block;
+    background-color: #d1fae5;
+    color: #047857;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.pending {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.completed {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+/* Action Section */
+
+.action-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.action-section p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Rent */
+
+.rent-section {
+    margin-bottom: 30px;
+}
+
+.rent-card {
+    background-color: white;
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rent-amount {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* Maintenance Form */
+
+.maintenance-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+
+    background-color: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Previous Requests */
+
+.requests-section {
+    margin-bottom: 30px;
+}
+
+.request-card {
+    background-color: white;
+
+    padding: 20px;
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request-card h3 {
+    margin-bottom: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1f2937;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .lease-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .status-container {
+        grid-template-columns: 1fr;
+    }
+
+    .rent-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .lease-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+}

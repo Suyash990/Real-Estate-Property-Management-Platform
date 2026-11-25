@@ -40,30 +40,34 @@
 
       <!-- Search box (layout only in this phase) -->
       <div class="search-box">
-        <input type="text" placeholder="Search by city, locality or PIN code">
-        <a href="listings.html" class="btn btn-primary">Search</a>
+        <input type="text" id="searchInput" placeholder="Search by city, locality or PIN code">
+        <a href="listings.html" id="searchBtn" class="btn btn-primary">Search</a>
       </div>
 
-      <p class="hero-note">Popular: Mathura &middot; Vrindavan &middot; Agra &middot; Noida</p>
+      <p class="hero-note" id="popularCities">Popular: <a href="#" data-city="Mathura">Mathura</a> &middot; <a href="#" data-city="Vrindavan">Vrindavan</a> &middot; <a href="#" data-city="Agra">Agra</a> &middot; <a href="#" data-city="Noida">Noida</a></p>
     </div>
 
     <div class="hero-image">
+<<<<<<< Updated upstream
       <img src="images/hero-building.jpg" alt="Modern apartment building">
+=======
+      <img src="images/images%20(1).jpeg" alt="Modern apartment building">
+>>>>>>> Stashed changes
     </div>
   </section>
 
   <!-- ============ QUICK STATS ============ -->
-  <section class="stats">
+  <section class="stats" id="stats">
     <div class="stat">
-      <h3>1,200+</h3>
+      <h3 data-target="1200" data-suffix="+">1,200+</h3>
       <p>Properties listed</p>
     </div>
     <div class="stat">
-      <h3>3,500+</h3>
+      <h3 data-target="3500" data-suffix="+">3,500+</h3>
       <p>Tenants managed</p>
     </div>
     <div class="stat">
-      <h3>98%</h3>
+      <h3 data-target="98" data-suffix="%">98%</h3>
       <p>Rent collected on time</p>
     </div>
     <div class="stat">
@@ -79,12 +83,12 @@
       <a href="listings.html" class="link-more">View all properties</a>
     </div>
 
-    <div class="property-grid">
+    <div class="property-grid" id="propertyGrid">
 
       <!-- Property card 1 -->
       <article class="property-card">
         <div class="card-image">
-          <img src="images/property-1.jpg" alt="2 BHK apartment in Mathura">
+          <img src="images/images.jpeg" alt="2 BHK apartment in Mathura">
           <span class="tag tag-available">Available</span>
         </div>
         <div class="card-body">
@@ -105,7 +109,7 @@
       <!-- Property card 2 -->
       <article class="property-card">
         <div class="card-image">
-          <img src="images/property-2.jpg" alt="3 BHK independent house">
+          <img src="images/images%20(2).jpeg" alt="3 BHK independent house">
           <span class="tag tag-occupied">Occupied</span>
         </div>
         <div class="card-body">
@@ -126,7 +130,7 @@
       <!-- Property card 3 -->
       <article class="property-card">
         <div class="card-image">
-          <img src="images/property-3.jpg" alt="Commercial shop space">
+          <img src="images/images%20(3).jpeg" alt="Commercial shop space">
           <span class="tag tag-maintenance">Under repair</span>
         </div>
         <div class="card-body">
@@ -147,7 +151,7 @@
       <!-- Property card 4 -->
       <article class="property-card">
         <div class="card-image">
-          <img src="images/property-4.jpg" alt="1 BHK studio flat">
+          <img src="images/images%20(4).jpeg" alt="1 BHK studio flat">
           <span class="tag tag-available">Available</span>
         </div>
         <div class="card-body">
@@ -228,7 +232,8 @@
     </div>
   </section>
 
-  <section class="cta">
+  <!-- ============ CALL TO ACTION ============ -->
+  <section class="cta" id="cta">
     <h2>Start managing your properties today</h2>
     <p>Create an account and add your first property in a few minutes.</p>
     <a href="register.html" class="btn btn-light">Create free account</a>
@@ -277,5 +282,8 @@
     </div>
   </footer>
 
+  <!-- jQuery (for effects + AJAX) then our script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>

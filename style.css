@@ -1,19 +1,11 @@
-/* =========================================================
-   style.css  -  SHARED STYLES
-   Used by every page of the project.
-   Contains: colour variables, reset, buttons, navbar, footer.
-   Do NOT add page-specific styles here.
-   ========================================================= */
 
-
-/* ---------- 1. Colour and spacing variables ---------- */
 :root {
-  --ink:        #10243B;   /* dark navy, used for headings and navbar */
-  --ink-soft:   #4A6076;   /* muted grey-blue for body text */
-  --accent:     #1F7A6B;   /* teal green, main brand colour */
+  --ink:        #10243B;  
+  --ink-soft:   #4A6076;  
+  --accent:     #1F7A6B;  
   --accent-dark:#165A4F;
-  --sand:       #F6F4EF;   /* warm off-white section background */
-  --line:       #DFE4E8;   /* border colour */
+  --sand:       #F6F4EF;   
+  --line:       #DFE4E8;   
   --white:      #FFFFFF;
 
   --radius: 10px;
@@ -21,7 +13,6 @@
 }
 
 
-/* ---------- 2. Basic reset ---------- */
 * {
   margin: 0;
   padding: 0;

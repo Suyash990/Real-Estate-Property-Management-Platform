@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NestKey | Rent & Maintenance</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">NestKey</div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="rent-maintenance.html" class="active">
+                Rent & Maintenance
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Page Heading -->
+        <section class="welcome">
+            <h1>Rent & Maintenance</h1>
+            <p>Manage your rent payments and maintenance requests.</p>
+        </section>
+
+        <!-- Rent Status -->
+        <section class="dashboard-section">
+            <h2>Rent Payment Status</h2>
+
+            <div class="rent-card">
+
+                <div>
+                    <h3>Monthly Rent</h3>
+                    <p class="amount">₹15,000</p>
+                    <p>Due Date: 05 December 2026</p>
+                </div>
+
+                <div>
+                    <h3>Payment Status</h3>
+                    <span id="rentStatus" class="status pending">
+                        Pending
+                    </span>
+
+                    <button type="button" id="payRentButton" class="btn">
+                        Pay Rent
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Maintenance Form -->
+        <section class="dashboard-section">
+
+            <h2>Submit Maintenance Request</h2>
+
+            <form id="maintenanceForm">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="property">Property Name</label>
+
+                    <input
+                        type="text"
+                        id="property"
+                        placeholder="Enter property name"
+                        value="Green Valley Apartments"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="issue">Select Issue</label>
+
+                    <select id="issue" required>
+                        <option value="">Select an issue</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Water Supply">Water Supply</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Describe Your Problem</label>
+
+                    <textarea
+                        id="description"
+                        rows="5"
+                        placeholder="Explain your maintenance problem..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Maintenance Date</label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+                </div>
+
+                <p id="formMessage" aria-live="polite"></p>
+
+                <button type="submit" class="btn">
+                    Submit Request
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Previous Requests -->
+        <section class="dashboard-section requests-section">
+
+            <h2>Previous Maintenance Requests</h2>
+
+            <div id="maintenanceRequests">
+                <p>No maintenance requests yet.</p>
+            </div>
+
+        </section>
+
+        <!-- Back to Dashboard -->
+        <section class="dashboard-section">
+            <a href="dashboard.html" class="btn">
+                Back to Dashboard
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 RentEase. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

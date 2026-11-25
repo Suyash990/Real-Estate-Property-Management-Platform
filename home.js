@@ -263,6 +263,27 @@ function addFavouriteButtons() {
   });
 }
 
+/* ---------- 9b. WHOLE CARD CLICKABLE (event delegation) ---------- */
+function setupCardClick() {
+  const grid = document.getElementById("propertyGrid");
+  grid.style.cursor = "pointer";
+
+  grid.addEventListener("click", (e) => {
+    // Ignore clicks on the heart button (it has its own job)
+    if (e.target.closest("button")) return;
+
+    const card = e.target.closest(".property-card");
+    if (!card) return;
+
+    const link = card.querySelector("a.btn"); // the Details link
+    if (!link) return;
+
+    // Pass the title in the URL so the details page can use it
+    const title = card.querySelector("h3").textContent;
+    window.location.href = link.getAttribute("href") + "?title=" + encodeURIComponent(title);
+  });
+}
+
 /* ---------- 10. TOAST MESSAGE ---------- */
 function showToast(text) {
   let toast = document.getElementById("toast");
@@ -520,6 +541,7 @@ async function init() {
   buildFilterBar();
   setupSearch();
   addFavouriteButtons();
+  setupCardClick();
   applyFilters(); // sets the "x of y shown" text
 }
 

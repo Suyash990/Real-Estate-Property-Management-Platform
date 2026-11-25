@@ -1,91 +1,1310 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Listings</title>
+
+    <meta name="description"
+        content="NestKey - Real Estate Property Management Platform. Discover, search, filter and compare rental houses, apartments and villas.">
+
+    <meta name="theme-color" content="#214c3b">
+
+    <title>NestKey | Real Estate Property Management Platform</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- External CSS -->
 
     <link rel="stylesheet" href="listing.css">
+
+
+    <!-- External JavaScript -->
+
+    <script src="listing.js" defer></script>
+
 </head>
+
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Property Listings</h1>
-        <p>Find your perfect property</p>
+    <!-- =====================================
+         HEADER / NAVIGATION
+    ====================================== -->
+
+    <header class="site-header">
+
+        <a href="../index.html" class="logo" aria-label="NestKey home">
+
+            <span class="logo-icon">N</span>
+
+            <span>
+                Nest<span class="logo-highlight">Key</span>
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="#properties" class="active">
+                Explore Homes
+            </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+        </nav>
+
+
+        <a href="#properties" class="header-button">
+
+            Explore Properties <span aria-hidden="true">↗</span>
+
+        </a>
+
     </header>
 
-    <!-- Search and Filter -->
-    <section class="search-box">
 
-        <input type="text" placeholder="Search location">
+    <main id="top">
 
-        <select>
-            <option>Select Property Type</option>
-            <option>House</option>
-            <option>Apartment</option>
-            <option>Villa</option>
-        </select>
 
-        <select>
-            <option>Price Range</option>
-            <option>₹10,000 - ₹20,000</option>
-            <option>₹20,000 - ₹50,000</option>
-            <option>₹50,000+</option>
-        </select>
+        <!-- =====================================
+             HERO SECTION
+        ====================================== -->
 
-        <button>Search</button>
+        <section class="hero-section">
 
-    </section>
+            <div class="hero-content">
 
-    <!-- Property Cards -->
-    <section class="property-grid">
+                <div class="eyebrow">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="House">
-            <div class="card-content">
-                <h2>Modern Family House</h2>
-                <p class="location">Mathura, Uttar Pradesh</p>
-                <p>3 Bedrooms • 2 Bathrooms</p>
-                <h3>₹35,000 / month</h3>
-                <button>View Details</button>
+                    <span class="eyebrow-dot"></span>
+
+                    FIND A PLACE TO CALL HOME
+
+                </div>
+
+
+                <h1>
+
+                    Find a space<br>
+                    that feels like <em>you.</em>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Discover thoughtfully selected homes and apartments
+                    that match your lifestyle, location and budget.
+                    Compare your options and make an informed choice.
+
+                </p>
+
+
+                <div class="hero-features">
+
+                    <span>✓ Easy property discovery</span>
+
+                    <span>✓ Compare your shortlist</span>
+
+                </div>
+
+
+                <a href="#properties" class="hero-link">
+
+                    Explore all properties <span aria-hidden="true">→</span>
+
+                </a>
+
             </div>
+
+
+            <div class="hero-visual">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85"
+                    alt="Beautiful modern residential property">
+
+                <div class="hero-image-overlay"></div>
+
+
+                <div class="floating-card">
+
+                    <div class="floating-icon">⌂</div>
+
+                    <div>
+
+                        <strong>Find your next home</strong>
+
+                        <p>Explore places you'll love</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-caption">
+
+                    <span>MODERN LIVING</span>
+
+                    <span>NESTKEY / EXPLORE</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SEARCH AND FILTER SECTION
+        ====================================== -->
+
+        <section class="search-section" aria-labelledby="searchHeading">
+
+
+            <div class="search-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR NEXT HOME STARTS HERE
+                    </span>
+
+                    <h2 id="searchHeading">
+                        Find your perfect match
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <form class="search-form" id="filterForm">
+
+
+                <!-- LOCATION SEARCH -->
+
+                <div class="search-field location-field">
+
+                    <label for="searchInput">
+                        Location or Property
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="field-icon" aria-hidden="true">⌖</span>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Enter city or property name"
+                            autocomplete="off">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROPERTY TYPE -->
+
+                <div class="search-field">
+
+                    <label for="typeFilter">
+                        Property Type
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="field-icon" aria-hidden="true">⌂</span>
+
+                        <select id="typeFilter">
+
+                            <option value="all">
+                                All Property Types
+                            </option>
+
+                            <option value="house">
+                                House
+                            </option>
+
+                            <option value="apartment">
+                                Apartment
+                            </option>
+
+                            <option value="villa">
+                                Villa
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BEDROOM FILTER -->
+
+                <div class="search-field">
+
+                    <label for="bedroomFilter">
+                        Bedrooms
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="field-icon" aria-hidden="true">▤</span>
+
+                        <select id="bedroomFilter">
+
+                            <option value="all">
+                                Any Bedrooms
+                            </option>
+
+                            <option value="1">
+                                1 Bedroom
+                            </option>
+
+                            <option value="2">
+                                2 Bedrooms
+                            </option>
+
+                            <option value="3">
+                                3 Bedrooms
+                            </option>
+
+                            <option value="4-plus">
+                                4+ Bedrooms
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MONTHLY BUDGET -->
+
+                <div class="search-field">
+
+                    <label for="budgetFilter">
+                        Monthly Budget
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="field-icon" aria-hidden="true">₹</span>
+
+                        <select id="budgetFilter">
+
+                            <option value="all">
+                                Any Budget
+                            </option>
+
+                            <option value="under-20000">
+                                Under ₹20,000
+                            </option>
+
+                            <option value="20000-50000">
+                                ₹20,000 - ₹50,000
+                            </option>
+
+                            <option value="50000-plus">
+                                ₹50,000+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FURNISHING FILTER -->
+
+                <div class="search-field">
+
+                    <label for="furnishingFilter">
+                        Furnishing
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <select id="furnishingFilter">
+
+                            <option value="all">
+                                Any Furnishing
+                            </option>
+
+                            <option value="Furnished">
+                                Furnished
+                            </option>
+
+                            <option value="Semi-Furnished">
+                                Semi-Furnished
+                            </option>
+
+                            <option value="Unfurnished">
+                                Unfurnished
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AVAILABILITY FILTER -->
+
+                <div class="search-field">
+
+                    <label for="availabilityFilter">
+                        Availability
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <select id="availabilityFilter">
+
+                            <option value="all">
+                                Any Status
+                            </option>
+
+                            <option value="Available">
+                                Available
+                            </option>
+
+                            <option value="Coming Soon">
+                                Coming Soon
+                            </option>
+
+                            <option value="Rented">
+                                Rented
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AMENITIES FILTER -->
+
+                <div class="search-field">
+
+                    <label for="amenityFilter">
+                        Must-have Amenity
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <select id="amenityFilter">
+
+                            <option value="all">
+                                Any Amenity
+                            </option>
+
+                            <option value="Parking">
+                                Parking
+                            </option>
+
+                            <option value="Balcony">
+                                Balcony
+                            </option>
+
+                            <option value="Garden">
+                                Garden
+                            </option>
+
+                            <option value="Security">
+                                Security
+                            </option>
+
+                            <option value="Power Backup">
+                                Power Backup
+                            </option>
+
+                            <option value="Lift Access">
+                                Lift Access
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SEARCH BUTTON -->
+
+                <button type="submit" class="search-button">
+
+                    <span>Search Homes</span>
+
+                    <span aria-hidden="true">→</span>
+
+                </button>
+
+            </form>
+
+
+
+            <!-- QUICK SEARCH -->
+
+            <div class="quick-search" aria-label="Popular locations">
+
+                <span>Popular:</span>
+
+
+                <button
+                    type="button"
+                    class="quick-chip"
+                    data-query="Mathura">
+
+                    Mathura
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="quick-chip"
+                    data-query="Delhi">
+
+                    Delhi
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="quick-chip"
+                    data-query="Agra">
+
+                    Agra
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="quick-chip"
+                    data-query="Noida">
+
+                    Noida
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PROPERTY LISTINGS SECTION
+        ====================================== -->
+
+        <section
+            class="listings-section"
+            id="properties"
+            aria-labelledby="listingTitle">
+
+
+            <!-- LISTING HEADING -->
+
+            <div class="listing-heading">
+
+                <div class="listing-title">
+
+                    <span class="section-label">
+                        EXPLORE OUR COLLECTION
+                    </span>
+
+
+                    <h2 id="listingTitle">
+
+                        Homes worth <em>discovering.</em>
+
+                    </h2>
+
+
+                    <p>
+
+                        Explore spaces designed for the way you want to live.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- LISTING CONTROLS -->
+
+                <div class="listing-controls">
+
+
+                    <!-- SAVED PROPERTIES -->
+
+                    <button
+                        type="button"
+                        id="favoritesToggle"
+                        class="favorites-toggle"
+                        aria-pressed="false">
+
+                        ♡ Saved (0)
+
+                    </button>
+
+
+
+                    <!-- SORTING -->
+
+                    <div class="sort-wrapper">
+
+                        <label for="sortSelect">
+                            Sort By
+                        </label>
+
+
+                        <select id="sortSelect">
+
+                            <option value="recommended">
+                                Recommended
+                            </option>
+
+                            <option value="price-low">
+                                Price: Low to High
+                            </option>
+
+                            <option value="price-high">
+                                Price: High to Low
+                            </option>
+
+                            <option value="area-high">
+                                Largest First
+                            </option>
+
+                            <option value="newest">
+                                Newest First
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESULTS COUNT -->
+
+            <div class="results-row">
+
+                <p id="resultsCount" aria-live="polite">
+
+                    Loading Properties...
+
+                </p>
+
+
+                <button
+                    type="button"
+                    id="clearFilters"
+                    class="clear-button">
+
+                    Clear All Filters
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ACTIVE FILTER CHIPS -->
+
+            <div
+                class="active-filters"
+                id="activeFilters"
+                aria-label="Active filters">
+
+            </div>
+
+
+
+            <!-- JSON SERVER CONNECTION STATUS -->
+
+            <div
+                class="api-status"
+                id="apiStatus"
+                role="status">
+
+                Connecting to property database...
+
+            </div>
+
+
+
+            <!-- PROPERTY INSIGHTS -->
+
+            <div
+                class="insights-grid"
+                aria-label="Property search insights">
+
+
+                <article class="insight-card">
+
+                    <span>Matching Properties</span>
+
+                    <h3 id="insightCount">0</h3>
+
+                    <p>Listings matching your search</p>
+
+                </article>
+
+
+
+                <article class="insight-card">
+
+                    <span>Average Monthly Rent</span>
+
+                    <h3 id="averageRent">—</h3>
+
+                    <p>Based on matching listings</p>
+
+                </article>
+
+
+
+                <article class="insight-card">
+
+                    <span>Lowest Monthly Rent</span>
+
+                    <h3 id="lowestRent">—</h3>
+
+                    <p>Lowest listed rental price</p>
+
+                </article>
+
+
+
+                <article class="insight-card">
+
+                    <span>Most Common Property</span>
+
+                    <h3 id="popularType">—</h3>
+
+                    <p>In your current results</p>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- COMPARE PROPERTIES TOOLBAR -->
+
+            <div
+                class="compare-toolbar"
+                id="compareToolbar"
+                hidden>
+
+
+                <div>
+
+                    <h3>Compare Properties</h3>
+
+                    <p id="compareCount">
+
+                        0 of 3 Properties Selected
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="compare-actions">
+
+
+                    <button
+                        type="button"
+                        id="compareButton"
+                        disabled>
+
+                        Compare Selected
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        id="clearCompare">
+
+                        Clear Selection
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DYNAMIC PROPERTY CARDS -->
+
+            <div
+                class="property-grid"
+                id="propertyGrid"
+                aria-live="polite">
+
+            </div>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="empty-state"
+                id="emptyState"
+                hidden>
+
+
+                <div class="empty-icon" aria-hidden="true">⌕</div>
+
+
+                <h3>No Properties Found</h3>
+
+
+                <p>
+
+                    We couldn't find a property matching your search.
+                    Try changing your filters.
+
+                </p>
+
+
+                <button
+                    type="button"
+                    id="resetEmpty">
+
+                    Explore All Properties
+
+                </button>
+
+            </div>
+
+
+
+            <!-- LOAD MORE -->
+
+            <div
+                class="load-more-wrap"
+                id="loadMoreWrap"
+                hidden>
+
+
+                <button
+                    type="button"
+                    id="loadMoreButton"
+                    class="load-more-button">
+
+                    Load More Properties
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RECENTLY VIEWED PROPERTIES
+        ====================================== -->
+
+        <section
+            class="recent-section"
+            id="recentSection"
+            hidden
+            aria-labelledby="recentTitle">
+
+
+            <div class="section-heading-row">
+
+                <div>
+
+                    <span class="section-label">
+                        PICK UP WHERE YOU LEFT OFF
+                    </span>
+
+
+                    <h2 id="recentTitle">
+
+                        Recently Viewed
+
+                    </h2>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    id="clearRecent"
+                    class="clear-button">
+
+                    Clear History
+
+                </button>
+
+            </div>
+
+
+
+            <!-- DYNAMIC RECENTLY VIEWED CARDS -->
+
+            <div
+                class="recent-grid"
+                id="recentGrid">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             HOW IT WORKS SECTION
+        ====================================== -->
+
+        <section
+            class="info-section"
+            id="how-it-works">
+
+
+            <div>
+
+                <span class="section-label">
+                    SIMPLE PROPERTY DISCOVERY
+                </span>
+
+
+                <h2>
+
+                    Your next move, made easier.
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="info-steps">
+
+
+                <!-- STEP 1 -->
+
+                <article class="info-step">
+
+                    <span>01</span>
+
+                    <h3>Explore</h3>
+
+                    <p>
+
+                        Browse a collection of rental properties.
+
+                    </p>
+
+                </article>
+
+
+
+                <!-- STEP 2 -->
+
+                <article class="info-step">
+
+                    <span>02</span>
+
+                    <h3>Discover</h3>
+
+                    <p>
+
+                        Use search and filters to find your ideal home.
+
+                    </p>
+
+                </article>
+
+
+
+                <!-- STEP 3 -->
+
+                <article class="info-step">
+
+                    <span>03</span>
+
+                    <h3>Compare</h3>
+
+                    <p>
+
+                        Review property details and compare your choices.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         PROPERTY DETAILS POPUP
+    ====================================== -->
+
+    <dialog
+        class="property-dialog"
+        id="propertyDialog"
+        aria-labelledby="modalTitle">
+
+
+        <div class="dialog-layout">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="dialog-close"
+                id="closeDialog"
+                aria-label="Close property details">
+
+                &times;
+
+            </button>
+
+
+
+            <!-- PROPERTY IMAGE -->
+
+            <div class="dialog-photo-wrap">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt="Selected property">
+
+
+                <span
+                    class="dialog-badge"
+                    id="modalBadge">
+
+                </span>
+
+            </div>
+
+
+
+            <!-- PROPERTY INFORMATION -->
+
+            <div class="dialog-details">
+
+
+                <span
+                    class="dialog-type"
+                    id="modalType">
+
+                </span>
+
+
+
+                <h2 id="modalTitle">
+
+                    Property Name
+
+                </h2>
+
+
+
+                <p
+                    class="modal-location"
+                    id="modalLocation">
+
+                </p>
+
+
+
+                <!-- PRICE -->
+
+                <div class="modal-price">
+
+                    <strong id="modalPrice"></strong>
+
+                    <span>/ month</span>
+
+                </div>
+
+
+
+                <!-- PROPERTY FEATURES -->
+
+                <div
+                    class="modal-facts"
+                    id="modalFacts">
+
+                </div>
+
+
+
+                <!-- AVAILABILITY -->
+
+                <p
+                    class="modal-status"
+                    id="modalAvailability">
+
+                </p>
+
+
+
+                <!-- FURNISHING -->
+
+                <p
+                    class="modal-furnishing"
+                    id="modalFurnishing">
+
+                </p>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="modal-description">
+
+                    <h3>About This Property</h3>
+
+                    <p id="modalDescription"></p>
+
+                </div>
+
+
+
+                <!-- AMENITIES -->
+
+                <div class="modal-amenities">
+
+                    <h3>Property Highlights</h3>
+
+                    <ul id="modalAmenities"></ul>
+
+                </div>
+
+
+
+                <!-- POPUP ACTIONS -->
+
+                <div class="modal-actions">
+
+
+                    <button
+                        type="button"
+                        class="modal-share-button"
+                        id="modalShare">
+
+                        Share Property
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        class="modal-done-button"
+                        id="modalDone">
+
+                        Close Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" alt="Apartment">
-            <div class="card-content">
-                <h2>Luxury Apartment</h2>
-                <p class="location">Delhi, India</p>
-                <p>2 Bedrooms • 2 Bathrooms</p>
-                <h3>₹28,000 / month</h3>
-                <button>View Details</button>
+    </dialog>
+
+
+
+    <!-- =====================================
+         PROPERTY COMPARISON POPUP
+    ====================================== -->
+
+    <dialog
+        class="compare-dialog"
+        id="compareDialog"
+        aria-labelledby="compareHeading">
+
+
+        <div class="compare-dialog-content">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                id="closeCompareDialog"
+                class="compare-close"
+                aria-label="Close comparison">
+
+                &times;
+
+            </button>
+
+
+
+            <h2 id="compareHeading">
+
+                Compare Properties
+
+            </h2>
+
+
+
+            <p>
+
+                Compare your selected properties side by side.
+
+            </p>
+
+
+
+            <!-- COMPARISON TABLE -->
+
+            <div class="compare-table-wrap">
+
+                <table class="compare-table">
+
+
+                    <thead id="compareTableHead">
+
+                    </thead>
+
+
+
+                    <tbody id="compareTableBody">
+
+                    </tbody>
+
+
+                </table>
+
             </div>
+
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811" alt="Villa">
-            <div class="card-content">
-                <h2>Beautiful Villa</h2>
-                <p class="location">Agra, Uttar Pradesh</p>
-                <p>4 Bedrooms • 3 Bathrooms</p>
-                <h3>₹50,000 / month</h3>
-                <button>View Details</button>
-            </div>
-        </div>
+    </dialog>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="House">
-            <div class="card-content">
-                <h2>Elegant Home</h2>
-                <p class="location">Noida, Uttar Pradesh</p>
-                <p>3 Bedrooms • 2 Bathrooms</p>
-                <h3>₹40,000 / month</h3>
-                <button>View Details</button>
-            </div>
-        </div>
 
-    </section>
+
+    <!-- =====================================
+         TOAST NOTIFICATION
+    ====================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite">
+
+    </div>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="site-footer">
+
+
+        <!-- NESTKEY BRANDING -->
+
+        <a href="#top" class="logo footer-logo">
+
+            <span class="logo-icon">N</span>
+
+            <span>
+
+                Nest<span class="logo-highlight">Key</span>
+
+            </span>
+
+        </a>
+
+
+
+        <p>
+
+            Your space. Your choice. Your NestKey.
+
+        </p>
+
+
+
+        <span>
+
+            © 2026 NestKey. All rights reserved.
+
+        </span>
+
+    </footer>
+
 
 </body>
+
 </html>

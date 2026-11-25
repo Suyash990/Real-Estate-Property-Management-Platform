@@ -1,3 +1,5 @@
+
+```css
 * {
     margin: 0;
     padding: 0;
@@ -328,4 +330,20 @@ footer p {
         width: 90%;
     }
 }
+/* Gallery Image Hover Effect */
+.gallery img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Contact Form Focus Effect */
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #1f4e79;
+}
+```

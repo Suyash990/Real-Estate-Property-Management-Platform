@@ -366,7 +366,7 @@ async function loadMoreProperties() {
         item.baths + " Baths</li><li>" + item.area + " sq ft</li></ul>" +
         '<div class="card-footer"><span class="price">&#8377;' +
         item.price.toLocaleString("en-IN") + " <small>/ month</small></span>" +
-        '<a href="property-details.html" class="btn btn-outline btn-small">Details</a></div></div>';
+        '<a href="../property%20details/property-details.html" class="btn btn-outline btn-small">Details</a></div></div>';
 
       grid.appendChild(card);
     });

@@ -1,0 +1,4 @@
+[
+  { "title": "2 BHK Flat", "location": "Vrindavan, Mathura", "price": 12000, "status": "available", "beds": 2, "baths": 2, "area": 900, "image": "images/images.jpeg" },
+  { "title": "3 BHK Villa", "location": "Sector 62, Noida", "price": 35000, "status": "occupied", "beds": 3, "baths": 3, "area": 2100, "image": "images/images%20(2).jpeg" }
+]

@@ -1,0 +1,105 @@
+/* =========================================================
+   nav.css - SHARED navbar, footer, sign-in pop-up (all pages)
+   Uses "nk-" class names so it never clashes with page CSS.
+   ========================================================= */
+.nk-header, .nk-footer, .nk-modal, .nk-toast {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+.nk-header *, .nk-footer *, .nk-modal * { box-sizing: border-box; }
+
+/* ---------- Header ---------- */
+.nk-header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff; border-bottom: 1px solid #DFE4E8;
+}
+.nk-bar {
+  max-width: 1140px; margin: 0 auto; padding: 14px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+}
+.nk-logo {
+  font-size: 24px; font-weight: 700; color: #10243B !important;
+  letter-spacing: -0.5px; text-decoration: none !important;
+}
+.nk-logo span { color: #1F7A6B; }
+
+.nk-links { display: flex; align-items: center; gap: 26px; margin: 0; }
+.nk-links a {
+  color: #10243B; text-decoration: none; font-size: 15px; font-weight: 500;
+  padding: 4px 0; border-bottom: 2px solid transparent;
+}
+.nk-links a:hover, .nk-links a.active { color: #1F7A6B; border-bottom-color: #1F7A6B; }
+.nk-links a.nk-signin {
+  background: #1F7A6B; color: #fff; padding: 8px 18px; border-radius: 10px;
+  border: 2px solid #1F7A6B; font-weight: 600; font-size: 14px;
+}
+.nk-links a.nk-signin:hover { background: #165A4F; border-color: #165A4F; color: #fff; }
+
+.nk-toggle {
+  display: none; background: none; border: 1px solid #DFE4E8; border-radius: 8px;
+  font-size: 22px; line-height: 1; padding: 6px 12px; cursor: pointer; color: #10243B;
+}
+
+/* ---------- Footer ---------- */
+.nk-footer { background: #10243B; color: #C9D4DE; margin-top: 50px; }
+.nk-foot-grid {
+  max-width: 1140px; margin: 0 auto; padding: 40px 20px 24px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px;
+}
+.nk-footer h4 { color: #fff; font-size: 16px; margin: 0 0 12px; }
+.nk-footer p { margin: 0 0 6px; font-size: 14px; color: #C9D4DE; }
+.nk-footer ul { list-style: none; margin: 0; padding: 0; }
+.nk-footer li { margin-bottom: 6px; font-size: 14px; }
+.nk-footer a { color: #C9D4DE; text-decoration: none; }
+.nk-footer a:hover { color: #63D6C5; }
+.nk-foot-logo { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.nk-foot-logo span { color: #63D6C5; }
+.nk-foot-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12); text-align: center;
+  padding: 16px 20px; font-size: 13px;
+}
+
+/* ---------- Sign-in modal ---------- */
+.nk-modal {
+  display: none; position: fixed; inset: 0; z-index: 300;
+  background: rgba(16,36,59,0.6); align-items: center; justify-content: center;
+}
+.nk-box {
+  background: #fff; border-radius: 12px; padding: 28px; width: 380px; max-width: 92%;
+  position: relative; color: #4A6076;
+}
+.nk-box h2 { margin: 0 0 4px; color: #10243B; font-size: 24px; }
+.nk-box p.nk-sub { margin: 0 0 16px; font-size: 14px; }
+.nk-box input[type="text"], .nk-box input[type="password"] {
+  width: 100%; padding: 11px; margin-bottom: 10px; font-size: 15px;
+  border: 1px solid #DFE4E8; border-radius: 8px;
+}
+.nk-box label.nk-show { display: block; font-size: 13px; margin: 2px 0 10px; cursor: pointer; }
+.nk-close {
+  position: absolute; top: 8px; right: 14px; border: none; background: none;
+  font-size: 28px; cursor: pointer; color: #4A6076;
+}
+.nk-error { color: #C0392B; font-size: 13px; min-height: 18px; margin-bottom: 8px; }
+.nk-primary {
+  width: 100%; padding: 12px; border: none; border-radius: 10px; cursor: pointer;
+  background: #1F7A6B; color: #fff; font-size: 15px; font-weight: 600;
+}
+.nk-primary:hover { background: #165A4F; }
+.nk-switch { margin-top: 14px; font-size: 14px; text-align: center; }
+.nk-switch a { color: #1F7A6B; font-weight: 600; cursor: pointer; }
+
+/* ---------- Toast ---------- */
+.nk-toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 400; display: none;
+  background: #10243B; color: #fff; padding: 12px 18px; border-radius: 10px; font-size: 14px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 800px) {
+  .nk-toggle { display: block; }
+  .nk-bar { flex-wrap: wrap; }
+  .nk-links { display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 12px; padding: 10px 0 6px; }
+  .nk-links.open { display: flex; }
+  .nk-foot-grid { grid-template-columns: 1fr; }
+}

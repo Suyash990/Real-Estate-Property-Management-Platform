@@ -1,166 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NestKey | Rent & Maintenance</title>
+    <title>NestKey | Owner Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="../nav.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">NestKey</div>
+    <div class="nk-header" role="banner">
+    <div class="nk-bar">
+      <a href="../index.html" class="nk-logo">Nest<span>Key</span></a>
+      <button type="button" class="nk-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <div class="nk-links" id="nkLinks" role="navigation" aria-label="Main navigation">
+        <a href="../index.html" data-page="home">Home</a>
+        <a href="../listing%20page/listing.html" data-page="properties">Properties</a>
+        <a href="dashboard.html" data-page="dashboard">Dashboard</a>
+        <a href="rent-maintenance.html" data-page="rent">Rent &amp; Repairs</a>
+        <a href="../about.html" data-page="about">About</a>
+        <a href="#" class="nk-signin" data-auth="login">Sign in</a>
+      </div>
+    </div>
+  </div>
 
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../listing page/listing.html">Properties</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="rent-maintenance.html" class="active">
-                Rent & Maintenance
-            </a>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
     <main>
 
-        <!-- Page Heading -->
         <section class="welcome">
-            <h1>Rent & Maintenance</h1>
-            <p>Manage your rent payments and maintenance requests.</p>
+            <h1>Owner Dashboard</h1>
+            <p>A quick look at your rent and maintenance requests.</p>
         </section>
 
-        <!-- Rent Status -->
+        <!-- Summary cards -->
         <section class="dashboard-section">
-            <h2>Rent Payment Status</h2>
+            <div class="cards">
 
-            <div class="rent-card">
-
-                <div>
+                <div class="card">
                     <h3>Monthly Rent</h3>
                     <p class="amount">₹15,000</p>
-                    <p>Due Date: 05 December 2026</p>
+                    <p>Due: 05 December 2026</p>
                 </div>
 
-                <div>
-                    <h3>Payment Status</h3>
-                    <span id="rentStatus" class="status pending">
-                        Pending
-                    </span>
+                <div class="card">
+                    <h3>Rent Status</h3>
+                    <span id="rentStatus" class="status pending">Pending</span>
+                </div>
 
-                    <button type="button" id="payRentButton" class="btn">
-                        Pay Rent
-                    </button>
+                <div class="card">
+                    <h3>Maintenance Requests</h3>
+                    <p class="amount" id="requestCount">0</p>
+                    <p>Total submitted</p>
                 </div>
 
             </div>
-
         </section>
 
-        <!-- Maintenance Form -->
-        <section class="dashboard-section">
-
-            <h2>Submit Maintenance Request</h2>
-
-            <form id="maintenanceForm">
-
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your name"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="property">Property Name</label>
-
-                    <input
-                        type="text"
-                        id="property"
-                        placeholder="Enter property name"
-                        value="Green Valley Apartments"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="issue">Select Issue</label>
-
-                    <select id="issue" required>
-                        <option value="">Select an issue</option>
-                        <option value="Plumbing">Plumbing</option>
-                        <option value="Electrical">Electrical</option>
-                        <option value="Cleaning">Cleaning</option>
-                        <option value="Water Supply">Water Supply</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Describe Your Problem</label>
-
-                    <textarea
-                        id="description"
-                        rows="5"
-                        placeholder="Explain your maintenance problem..."
-                        required
-                    ></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="date">Preferred Maintenance Date</label>
-
-                    <input
-                        type="date"
-                        id="date"
-                        required
-                    >
-                </div>
-
-                <p id="formMessage" aria-live="polite"></p>
-
-                <button type="submit" class="btn">
-                    Submit Request
-                </button>
-
-            </form>
-
-        </section>
-
-        <!-- Previous Requests -->
+        <!-- Recent requests (filled in by dashboard.js) -->
         <section class="dashboard-section requests-section">
-
-            <h2>Previous Maintenance Requests</h2>
-
-            <div id="maintenanceRequests">
+            <h2>Recent Maintenance Requests</h2>
+            <div id="dashboardRequests">
                 <p>No maintenance requests yet.</p>
             </div>
-
         </section>
 
-        <!-- Back to Dashboard -->
-        <section class="dashboard-section">
-            <a href="dashboard.html" class="btn">
-                Back to Dashboard
-            </a>
+        <!-- Quick action -->
+        <section class="dashboard-section quick-action">
+            <h2>Need to pay rent or report a problem?</h2>
+            <p>Pay your rent and submit maintenance requests from one page.</p>
+            <a href="rent-maintenance.html" class="btn">Go to Rent &amp; Maintenance</a>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 RentEase. All Rights Reserved.</p>
-    </footer>
+    <div class="nk-footer" role="contentinfo">
+    <div class="nk-foot-grid">
+      <div>
+        <div class="nk-foot-logo">Nest<span>Key</span></div>
+        <p>Real estate property management for owners and tenants: listings, rent and maintenance in one place.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../listing%20page/listing.html">Properties</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="../about.html">About us</a></li>
+          <li><a href="../about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>GLA University, Mathura</li>
+          <li>support@nestkey.in</li>
+          <li>+91 98765 43210</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nk-foot-bottom">&copy; 2026 NestKey. B.Tech CSE Project, GLA University, Mathura.</div>
+  </div>
 
-    <!-- JavaScript -->
     <script src="dashboard.js"></script>
 
+  <script src="../nav.js"></script>
 </body>
 </html>

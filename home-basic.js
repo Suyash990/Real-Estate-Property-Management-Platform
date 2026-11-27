@@ -6,7 +6,6 @@ var searchBtn = document.getElementById("searchBtn");
 var grid = document.getElementById("propertyGrid");
 var cards = document.querySelectorAll(".property-card");
 var popularCities = document.querySelectorAll("#popularCities a");
-var signInBtn = document.querySelector(".navbar > a.btn");
 
 var currentStatus = "all"; // which filter is selected
 var sortAscending = true;  // sort direction
@@ -160,53 +159,9 @@ function countUp(element) {
   }, 30);
 }
 
-// ---------- 8. Sign in pop-up ----------
-function setupSignIn() {
-  var box = document.createElement("div");
-  box.style.cssText =
-    "display:none;position:fixed;top:0;left:0;width:100%;height:100%;" +
-    "background:rgba(0,0,0,0.6);z-index:100;";
-  box.innerHTML =
-    '<div style="background:white;width:320px;margin:120px auto;padding:25px;border-radius:10px;">' +
-    "<h2>Sign in</h2><br>" +
-    '<input id="email" type="text" placeholder="Email" style="width:100%;padding:10px;"><br><br>' +
-    '<input id="pass" type="password" placeholder="Password" style="width:100%;padding:10px;"><br>' +
-    '<p id="msg" style="color:red;font-size:13px;"></p>' +
-    '<button id="loginBtn" class="btn btn-primary">Sign in</button> ' +
-    '<button id="cancelBtn" class="btn btn-outline">Cancel</button>' +
-    "</div>";
-  document.body.appendChild(box);
-
-  signInBtn.onclick = function (event) {
-    event.preventDefault(); // stop going to login.html
-    box.style.display = "block";
-  };
-
-  document.getElementById("cancelBtn").onclick = function () {
-    box.style.display = "none";
-  };
-
-  document.getElementById("loginBtn").onclick = function () {
-    var email = document.getElementById("email").value;
-    var pass = document.getElementById("pass").value;
-    var msg = document.getElementById("msg");
-
-    if (!email.includes("@") || !email.includes(".")) {
-      msg.textContent = "Enter a valid email";
-    } else if (pass.length < 6) {
-      msg.textContent = "Password must be at least 6 characters";
-    } else {
-      msg.textContent = "";
-      signInBtn.textContent = "Hi, " + email.split("@")[0];
-      box.style.display = "none";
-    }
-  };
-}
-
 // ---------- 9. Events: connect everything ----------
 createFilterBar();
 addHearts();
-setupSignIn();
 runCounters();
 applyFilters();
 

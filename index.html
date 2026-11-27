@@ -8,26 +8,26 @@
   <!-- Shared styles: navbar, footer, buttons, colours (used by all pages) -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
 
   <!-- ============ NAVIGATION BAR (shared across all pages) ============ -->
-  <header class="site-header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">Nest<span>Key</span></a>
-
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="listing page/listing.html">Properties</a></li>
-        <li><a href="owner dashboard/dashboard.html">Dashboard</a></li>
-        <li><a href="owner dashboard/rent-maintenance.html">Rent &amp; Repairs</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-
-      <a href="login.html" class="btn btn-primary btn-small">Sign in</a>
-    </nav>
-  </header>
+  <div class="nk-header" role="banner">
+    <div class="nk-bar">
+      <a href="index.html" class="nk-logo">Nest<span>Key</span></a>
+      <button type="button" class="nk-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <div class="nk-links" id="nkLinks" role="navigation" aria-label="Main navigation">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="listing%20page/listing.html" data-page="properties">Properties</a>
+        <a href="owner%20dashboard/dashboard.html" data-page="dashboard">Dashboard</a>
+        <a href="owner%20dashboard/rent-maintenance.html" data-page="rent">Rent &amp; Repairs</a>
+        <a href="about.html" data-page="about">About</a>
+        <a href="#" class="nk-signin" data-auth="login">Sign in</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ HERO SECTION ============ -->
   <section class="hero">
@@ -233,37 +233,27 @@
   <section class="cta" id="cta">
     <h2>Start managing your properties today</h2>
     <p>Create an account and add your first property in a few minutes.</p>
-    <a href="register.html" class="btn btn-light">Create free account</a>
+    <a href="#" class="btn btn-light" data-auth="register">Create free account</a>
   </section>
 
   <!-- ============ FOOTER (shared across all pages) ============ -->
-  <footer class="site-footer">
-    <div class="footer-grid">
-
-      <div class="footer-col">
-        <a href="index.html" class="logo logo-light">Nest<span>Key</span></a>
-        <p>A property management platform built as a front-end project using HTML5 and CSS3.</p>
+  <div class="nk-footer" role="contentinfo">
+    <div class="nk-foot-grid">
+      <div>
+        <div class="nk-foot-logo">Nest<span>Key</span></div>
+        <p>Real estate property management for owners and tenants: listings, rent and maintenance in one place.</p>
       </div>
-
-      <div class="footer-col">
-        <h4>Platform</h4>
+      <div>
+        <h4>Quick links</h4>
         <ul>
-          <li><a href="listing page/listing.html">Browse properties</a></li>
-          <li><a href="owner dashboard/dashboard.html">Dashboard</a></li>
-          <li><a href="owner dashboard/rent-maintenance.html">Rent &amp; repairs</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listing%20page/listing.html">Properties</a></li>
+          <li><a href="owner%20dashboard/dashboard.html">Dashboard</a></li>
           <li><a href="about.html">About us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">Help centre</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
         </ul>
       </div>
-
-      <div class="footer-col">
+      <div>
         <h4>Contact</h4>
         <ul>
           <li>GLA University, Mathura</li>
@@ -271,16 +261,13 @@
           <li>+91 98765 43210</li>
         </ul>
       </div>
-
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 NestKey. B.Tech CSE Project, GLA University, Mathura.</p>
-    </div>
-  </footer>
+    <div class="nk-foot-bottom">&copy; 2026 NestKey. B.Tech CSE Project, GLA University, Mathura.</div>
+  </div>
 
   <!-- jQuery (for effects + AJAX) then our script -->
   
   <script src="home-basic.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>

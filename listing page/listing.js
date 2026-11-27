@@ -453,7 +453,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
 
-            const response = await fetch(API_URL);
+            let response;
+            let usingFile = false;
+
+            try {
+                response = await fetch(API_URL);
+            } catch (networkError) {
+                // json-server is not running: read the same data from db.json instead
+                response = await fetch("db.json");
+                usingFile = true;
+            }
 
 
             if (!response.ok) {
@@ -465,7 +474,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            const data = await response.json();
+            let data = await response.json();
+
+            // db.json keeps the list inside a "properties" key
+            if (usingFile && data && Array.isArray(data.properties)) {
+                data = data.properties;
+            }
 
 
             if (!Array.isArray(data)) {
@@ -580,7 +594,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             console.log(
-                "EstateEase: Properties loaded successfully from JSON Server."
+                "NestKey: Properties loaded successfully from JSON Server."
             );
 
 
@@ -2480,7 +2494,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     console.log(
-        "EstateEase Property Listings initialized successfully."
+        "NestKey Property Listings initialized successfully."
     );
 
 });

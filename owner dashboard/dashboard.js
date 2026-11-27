@@ -1,6 +1,6 @@
 
 // ==========================================
-// RENT EASE - DASHBOARD JAVASCRIPT
+// NESTKEY - DASHBOARD JAVASCRIPT
 // ==========================================
 
 // 1. GET MAINTENANCE REQUESTS FROM LOCAL STORAGE
